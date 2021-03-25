@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  direction: rtl;
+  padding-top: 100px;
+}
+
+/* start nav styles */
+.nav {
+  padding: 0.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 5px 3px rgb(143, 143, 143);
+}
+
+.nav > div{
+  flex:1
+}
+
+.nav .logo img {
+  max-height: 150px;
+}
+
+.nav .info {
+  text-align: center;
+}
+
+@media print {
+  body {
+    padding-top: 0;
+    background-color: tomato;
+  }
+  .nav {
+    display: none;
+  }
+  .table {
+    width: 100%;
+  }
+}
+/* end nav styles */
+
+.title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+}
