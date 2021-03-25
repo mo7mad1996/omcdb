@@ -82,8 +82,13 @@
     // end table
     
     // table header
-    $sql = "SELECT * FROM custmers";
+    $sql = "SELECT * FROM $tablename";
     $res = mysqli_query($conn, $sql);
+
+    if( isset($_POST["filter"]) ){
+        $sql = "SELECT * FROM $tablename WHERE thedate = '" . $_POST['filter'] . "'";
+        $res = mysqli_query($conn, $sql);
+    }
             
     echo "<tbody>";
     if(mysqli_num_rows($res) > 0){

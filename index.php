@@ -18,6 +18,9 @@
 			include "incloude/document/header.php";
 			include "incloude/addDataaa.php";
 		?>
+
+		<form method="post"><h2>بحث بالتاريخ</h2><input type ="date" name="filter"/><input type="submit"/></form>
+
 		<table class="table">
 			<form method="post" >
 				<?php include "incloude/document/table.php";?>
