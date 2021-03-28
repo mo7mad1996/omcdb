@@ -29,18 +29,6 @@ body {
   text-align: center;
 }
 
-@media print {
-  body {
-    padding-top: 0;
-    background-color: tomato;
-  }
-  .nav {
-    display: none;
-  }
-  .table {
-    width: 100%;
-  }
-}
 /* end nav styles */
 
 .title {
@@ -48,4 +36,27 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+
+
+@media print {
+  body > * {
+    display: none;
+  }
+  body {
+    padding-top: 0;
+    background-color: tomato;
+  }
+  .nav {
+    display: none;
+  }
+  
+  .table {
+    display: block;
+    width: 100%;
+  }
+
+  .table input {
+    display: none;
+  }
 }
